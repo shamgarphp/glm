@@ -1,0 +1,15 @@
+username
+phone
+password
+latitude    6302076892
+longitude
+gender
+dob
+address
+profile_pic
+user_type
+aadhar_no
+bank_name
+bank_ac_no
+bank_ifsc_code
+pancard_no

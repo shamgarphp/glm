@@ -1,0 +1,15 @@
+transport_list
+
+
+program_id
+vechile_name
+register_no
+driver_name
+licence_id
+vechicle_capacity
+from_location
+to_locatdion
+google_distance
+manual_distance
+
+vechile_name["auto","lorry"],driver_name":["bxbd","ccb"],"from_location":["ndnf","fgj"],"google_distance":["DBD Distribution Ltd, Boundary Park, Hemel Hempstead, UK","Nadiad, Gujarat, India"],"licence_id":["bxbd","ffj"],"manual_distance":["9507.19Km","478.1750625Km"],"register_no":["b CA d","vvg"],"to_locatdion":["Hanuman Nagar, Jogeshwari - Vikhroli Link Road, Rup Nagar, Goregaon East, Mumbai, Maharashtra, India","Madathara,Kollam, Kerala, India Tel :914742442271, Thiruvananthapuram - Thenmala Road, Madathara, Kerala, India"],"vechicle_capacity":["8484","856"],"vechile_name":["sjjs","xcbh"]}
