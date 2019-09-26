@@ -14,16 +14,20 @@ class Task_model extends CI_Model
 	    parent::__construct();
 	}   
 
-    public function save_task($data)
+    public function save_task($task_title,$task_description,$location_id)
     {
-        $this->db->insert($this->gl_tasks,$data);
-        if ($this->db->affected_rows() > 0 ) 
-        {
-          	return TRUE;
-        }
-        else
-        {
-        	return FALSE;
-        }
+        // $this->db->insert($this->gl_tasks,$data);
+        // if ($this->db->affected_rows() > 0 ) 
+        // {
+        //   	return TRUE;
+        // }
+        // else
+        // {
+        // 	return FALSE;
+        // }
+
+        $query="INSERT INTO gl_task( 'task_title', 'task_description', 'location_id') 
+        VALUES ('$task_title','$task_description','$location_id')";
+        $this->db->query($query);
     }
 }

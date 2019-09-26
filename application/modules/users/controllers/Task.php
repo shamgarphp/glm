@@ -32,21 +32,31 @@ class Task extends MX_Controller
     public function save_task(){
       $this->load->model('Task_model');
 
-      if(isset($_POST['add_user']) && !empty($_POST['add_user'])){
+      // if(isset($_POST['add_user']) && !empty($_POST['add_user'])){
 
-          $data = array(
-         'task_title' => $this->input->post("task_title"),
-         'task_description' => $this->input->post("task_description"),
-         'location_id' => $this->input->post("location_id")
-        );
+      //     $data = array(
+      //    'task_title' => $this->input->post("task_title"),
+      //    'task_description' => $this->input->post("task_description"),
+      //    'location_id' => $this->input->post("location_id")
+      //   );
 
-        $result = $this->Task_model->save_task($data);
+      //   $result = $this->Task_model->save_task($data);
 
-        if($result)
+      //   if($result)
+      //   {
+      //     $this->session->set_flashdata('success', 'Task Created Successfully!'); 
+      //     redirect('tasks');
+      //   }
+      // }
+      if($this->input->post('type')==1)
         {
-          $this->session->set_flashdata('success', 'Task Created Successfully!'); 
-          redirect('tasks');
+          $task_title=$this->input->post('task_title');
+          $task_description=$this->input->post('task_description');
+          $location_id=$this->input->post('location_id');
+          $this->Task_model->save_task($task_title,$task_description,$location_id);  
+          echo json_encode(array(
+            "statusCode"=>200
+          ));
         }
-      }
     }   
 }
