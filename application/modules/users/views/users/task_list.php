@@ -102,7 +102,33 @@ input[type = search] {
                       <th>Action</th> 
                     </tr>
                   </thead>
-                  <tbody>      
+                  <tbody>
+                  <?php if(isset($task_list) && !empty($task_list)){?>
+                  <?php $i = 1; foreach($task_list as $task){?>
+                  <tr>
+                    <td>
+                    <p class="check_select checkboxes"><input type="checkbox" name="quetions_list[]" id="quetions_list<?php echo $task['task_id']; ?>" value="<?php  echo $task['task_id']; ?>"><label for="quetions_list<?php echo $task['task_id']; ?>"></label></p>
+                   </td>
+                    <td> <?php echo $i++; ?> </td>
+                    <td><?php if(!empty($task['task_title'])) { echo ucfirst($task['task_title']);} ?> </td>
+                    <td> <?php if(!empty($task['task_description'])) { echo ucfirst($task['task_description']);} ?> </td>
+                    <td> <?php if(!empty($task['area'])) { echo ucfirst($task['area']);} ?> </td>
+                    <td nowrap="">
+                         <span class="dropdown">
+                            <a href="#" class="btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown" aria-expanded="true">
+                            <i class="la la-ellipsis-h"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                              
+                               <a class="dropdown-item" href="<?php echo base_url('EmployeeEdit?id='.base64_encode($task['task_id']));?>" id="question_edit" ><i class="la la-edit"></i>Veiw/Edit</a>
+
+                               <a class="dropdown-item"  href="" onclick="return confirm('do you want to delete it');"><i class="la la-remove"></i> Delete</a> 
+                                
+                            </div>
+                         </span>
+                      </td>
+                  </tr>
+                   <?php } } ?>   
                   </tbody>
                 </table>
               </div>
