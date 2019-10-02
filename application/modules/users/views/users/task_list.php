@@ -11,6 +11,9 @@ input[type = search] {
 }
 
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="<?php echo base_url('admin_assets');?>/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
@@ -113,20 +116,13 @@ input[type = search] {
                     <td><?php if(!empty($task['task_title'])) { echo ucfirst($task['task_title']);} ?> </td>
                     <td> <?php if(!empty($task['task_description'])) { echo ucfirst($task['task_description']);} ?> </td>
                     <td> <?php if(!empty($task['area'])) { echo ucfirst($task['area']);} ?> </td>
-                    <td nowrap="">
-                         <span class="dropdown">
-                            <a href="#" class="btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown" aria-expanded="true">
-                            <i class="la la-ellipsis-h"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                              
-                               <a class="dropdown-item" href="<?php echo base_url('EmployeeEdit?id='.base64_encode($task['task_id']));?>" id="question_edit" ><i class="la la-edit"></i>Veiw/Edit</a>
-
-                               <a class="dropdown-item"  href="" onclick="return confirm('do you want to delete it');"><i class="la la-remove"></i> Delete</a> 
-                                
-                            </div>
-                         </span>
-                      </td>
+                    <td>
+                      <p>
+                      <a class="dropdown-item" href="<?php echo base_url('editTask?taskId='.$task['task_id']);?>" id="question_edit" ><i class="glyphicon glyphicon-edit"></i></a>
+                      <a class="dropdown-item"  href="" onclick="return confirm('do you want to delete it');"><i class="glyphicon glyphicon-remove"></i></a>
+                      
+                      </p> 
+                    </td>
                   </tr>
                    <?php } } ?>   
                   </tbody>

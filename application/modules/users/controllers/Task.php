@@ -9,6 +9,7 @@ class Task extends MX_Controller
         $this->load->model('User_model');
         $this->load->model('vbs/Vbs_model');
         $this->load->library('upload');
+        $this->load->model('Task_model');
     }
 
     public function task_list()
@@ -36,12 +37,6 @@ class Task extends MX_Controller
 
       if(isset($_POST['add_user']) && !empty($_POST['add_user'])){
 
-        //   $data = array(
-        //  'task_title' => $this->input->post("task_title"),
-        //  'task_description' => $this->input->post("task_description"),
-        //  'location_id' => $this->input->post("location_id")
-        // );
-
         $result = $this->Task_model->save_task();
         redirect('tasks');
 
@@ -51,15 +46,18 @@ class Task extends MX_Controller
         //   redirect('tasks');
         // }
       }
-      // if($this->input->post('type')==1)
-      //   {
-      //     $task_title=$this->input->post('task_title');
-      //     $task_description=$this->input->post('task_description');
-      //     $location_id=$this->input->post('location_id');
-      //     $this->Task_model->save_task($task_title,$task_description,$location_id);  
-      //     echo json_encode(array(
-      //       "statusCode"=>200
-      //     ));
-      //   }
+    }
+
+    public function edit_task(){
+
+      $taskId = $_GET['taskId'];
+
+      $data['file']        = 'users/users/edit_task';
+      $data['task'] =  $this->Task_model->getTask($taskId);
+      $data['employee_list'] =  $this->User_model->getall_employees();
+      $data['staff_locations'] = $this->Vbs_model->getall_location();
+      $data['validation_js']  = 'admin/all_common_js/frontend_validation_js';
+      $this->load->view('admin_template/main',$data);
+      
     }   
 }

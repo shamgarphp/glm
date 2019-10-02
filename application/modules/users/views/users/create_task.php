@@ -119,12 +119,13 @@ table tbody tr.odd td {
                                 <td>
                                   <select  id="day_1" name="day[]" class="form-control item_unit">
                                     <option value="">Select Day</option>
-                                    <option value="1">Monday</option>
-                                    <option value="2">Tuesday</option>
-                                    <option<option value="4">Thursday</option>
-                                    <option value="5">Friday</option>
-                                    <option value="6">Saturday</option>
-                                    <option value="7">Sunday</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
                                   </select>
                                   
                                 </td>
@@ -163,9 +164,9 @@ table tbody tr.odd td {
                                 <td>
                                   <select id="category_1" name="category[]" class="form-control item_unit">
                                     <option value="">Select</option>
-                                    <option value="1">Vehicles</option>
-                                    <option value="2">Books</option>
-                                    <option value="3">People</option>
+                                    <option value="Vehicles">Vehicles</option>
+                                    <option value="Books">Books</option>
+                                    <option value="People">People</option>
                                   </select>                                  
                                 </td>
                                 <td><input type="text" name="type[]" id="type_1" class="form-control"></td>
@@ -191,7 +192,7 @@ table tbody tr.odd td {
                   <div class="m-portlet__foot m-portlet__foot--fit">
                     <div class="m-form__actions">
                       <button type="submit" class="btn btn-accent" name="add_user" id="add_user" value="add_user">Save</button>
-                      <button type="reset" class="btn btn-secondary reset" style="background-color: lightgray;">Cancel</button>
+                      <button type="reset" class="btn btn-secondary reset" id="cancelBtn" style="background-color: lightgray;">Cancel</button>
                     </div>
                   </div>
                 </div>
@@ -224,8 +225,8 @@ table tbody tr.odd td {
     </script> -->
 
     <script>
-      $(document).ready(function(){
-
+    var taskUrl = '<?php echo base_url('tasks'); ?>';
+    $(document).ready(function(){
         // Add new row in the table 
     $("#add_row").unbind('click').bind('click', function() {
       var table = $("#item_table");
@@ -237,12 +238,12 @@ table tbody tr.odd td {
                     '<td>'+ 
                     '<select class="form-control select_group product" data-row-id="'+row_id+'" id="day_'+row_id+'" name="day[]" style="width:100%;">'+
                         '<option value="">Select Day</option>';
-                      html += '<option value="'+1+'">Monday</option>';
-                      html += '<option value="'+2+'">Tuesday</option>';
-                      html += '<option value="'+3+'">Wednesday</option>';
-                      html += '<option value="'+4+'">Thursday</option>';
-                      html += '<option value="'+6+'">Friday</option>';
-                      html += '<option value="'+7+'">Saturday</option>';
+                      html += '<option value="Monday">Monday</option>';
+                      html += '<option value="Tuesday">Tuesday</option>';
+                      html += '<option value="Wednesday">Wednesday</option>';
+                      html += '<option value="Thursday">Thursday</option>';
+                      html += '<option value="Friday">Friday</option>';
+                      html += '<option value="Saturday">Saturday</option>';
 
                       html += '</select>'+
                     '</td>'+ 
@@ -264,6 +265,10 @@ table tbody tr.odd td {
               $(this).closest('tr').remove();
           });
 
+          $('#cancelBtn').click(function() {
+            window.location.replace(taskUrl);
+        });
+
                   // Add new row in the table 
       $("#add_participate").unbind('click').bind('click', function() {
         var table = $("#participate_table");
@@ -275,9 +280,9 @@ table tbody tr.odd td {
                       '<td>'+ 
                       '<select class="form-control select_group product" data-row-id="'+row_id+'" id="day_'+row_id+'" name="category[]" style="width:100%;">'+
                           '<option value="">Select</option>';
-                        html += '<option value="'+1+'">Vehicles</option>';
-                        html += '<option value="'+2+'">Books</option>';
-                        html += '<option value="'+3+'">Peoples</option>';
+                        html += '<option value="Vehicles">Vehicles</option>';
+                        html += '<option value="Books">Books</option>';
+                        html += '<option value="Peoples">Peoples</option>';
 
                         html += '</select>'+
                       '</td>'+ 

@@ -39,7 +39,7 @@ class Task_model extends CI_Model
                 $this->db->insert('day_item', $items);
             }
         }
-        
+
         $category = count($this->input->post('category'));
 
         for($x = 0; $x < $category; $x++) {
@@ -68,6 +68,23 @@ class Task_model extends CI_Model
         if ($query->num_rows() > 0) 
         {
            return $query->result_array();
+        }
+        else
+        {
+            return FALSE;
+        }
+    }
+
+    public function getTask($id){
+        $this->db->select('t.*,d.*,r.*');
+        $this->db->from('gl_tasks t');
+        $this->db->where('t.task_id = '.$id);
+        $this->db->join('day_item as d','t.task_id = d.task_id','left');
+        $this->db->join('participating_resources as r','t.task_id = r.task_id','left');        
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) 
+        {
+            return $query->row_array();
         }
         else
         {
