@@ -119,7 +119,7 @@ input[type = search] {
                     <td>
                       <p>
                       <a class="dropdown-item" href="<?php echo base_url('editTask?taskId='.$task['task_id']);?>" id="question_edit" ><i class="glyphicon glyphicon-edit"></i></a>
-                      <a class="dropdown-item"  href="" onclick="return confirm('do you want to delete it');"><i class="glyphicon glyphicon-remove"></i></a>
+                      <a class="dropdown-item"  href="<?php echo base_url('deleteTask?taskId='.$task['task_id']);?>" onclick="return confirm('do you want to delete it');"><i class="glyphicon glyphicon-remove"></i></a>
                       
                       </p> 
                     </td>

@@ -53,11 +53,25 @@ class Task extends MX_Controller
       $taskId = $_GET['taskId'];
 
       $data['file']        = 'users/users/edit_task';
-      $data['task'] =  $this->Task_model->getTask($taskId);
+      $data['tasks'] =  $this->Task_model->getTask($taskId);
+      $data['days'] =  $this->Task_model->getDaysByTaskId($taskId);
+      $data['participants'] =  $this->Task_model->getParticipantsByTaskId($taskId);
       $data['employee_list'] =  $this->User_model->getall_employees();
       $data['staff_locations'] = $this->Vbs_model->getall_location();
       $data['validation_js']  = 'admin/all_common_js/frontend_validation_js';
       $this->load->view('admin_template/main',$data);
       
-    }   
+    }
+
+    public function update_task(){
+      $taskId = $_GET['taskId'];
+      $result = $this->Task_model->update_task($taskId);
+      redirect('tasks');
+    } 
+
+    public function delete_task(){
+      $taskId = $_GET['taskId'];
+      $result = $this->Task_model->delete_task($taskId);
+      redirect('tasks');
+    }  
 }
