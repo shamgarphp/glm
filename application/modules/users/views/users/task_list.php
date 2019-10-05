@@ -11,6 +11,9 @@ input[type = search] {
 }
 
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="<?php echo base_url('admin_assets');?>/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
@@ -102,7 +105,26 @@ input[type = search] {
                       <th>Action</th> 
                     </tr>
                   </thead>
-                  <tbody>      
+                  <tbody>
+                  <?php if(isset($task_list) && !empty($task_list)){?>
+                  <?php $i = 1; foreach($task_list as $task){?>
+                  <tr>
+                    <td>
+                    <p class="check_select checkboxes"><input type="checkbox" name="quetions_list[]" id="quetions_list<?php echo $task['task_id']; ?>" value="<?php  echo $task['task_id']; ?>"><label for="quetions_list<?php echo $task['task_id']; ?>"></label></p>
+                   </td>
+                    <td> <?php echo $i++; ?> </td>
+                    <td><?php if(!empty($task['task_title'])) { echo ucfirst($task['task_title']);} ?> </td>
+                    <td> <?php if(!empty($task['task_description'])) { echo ucfirst($task['task_description']);} ?> </td>
+                    <td> <?php if(!empty($task['area'])) { echo ucfirst($task['area']);} ?> </td>
+                    <td>
+                      <p>
+                      <a class="dropdown-item" href="<?php echo base_url('editTask?taskId='.$task['task_id']);?>" id="question_edit" ><i class="glyphicon glyphicon-edit"></i></a>
+                      <a class="dropdown-item"  href="<?php echo base_url('deleteTask?taskId='.$task['task_id']);?>" onclick="return confirm('do you want to delete it');"><i class="glyphicon glyphicon-remove"></i></a>
+                      
+                      </p> 
+                    </td>
+                  </tr>
+                   <?php } } ?>   
                   </tbody>
                 </table>
               </div>
