@@ -162,7 +162,11 @@ class Task_model extends CI_Model
 
             $this->db->where('task_id', $id);
             $delete_item = $this->db->delete('day_item');
-            return ($delete == true && $delete_item) ? true : false;
+
+            $this->db->where('task_id', $id);
+            $delete_resource_item = $this->db->delete('participating_resources');
+
+            return ($delete == true && $delete_resource_item == true && $delete_item) ? true : false;
         }
     }
 }
