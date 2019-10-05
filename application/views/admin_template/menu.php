@@ -52,6 +52,7 @@
                 <div class="m-menu__submenu"><span class="m-menu__arrow"></span>
                   <ul class="m-menu__subnav">
                     <li class="m-menu__item m-menu__item<?php echo main_menu_active("users",array("task_list","task_edit")); ?>" aria-haspopup="true"><a href="<?php echo base_url('tasks'); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Task List</span></a></li>
+                    <li class="m-menu__item m-menu__item<?php echo main_menu_active("users",array("task_list","task_edit")); ?>" aria-haspopup="true"><a href="<?php echo base_url('my-calendar'); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Calender View</span></a></li>
 
                   </ul>
                 </div>
