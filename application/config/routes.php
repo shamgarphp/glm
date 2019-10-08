@@ -77,6 +77,9 @@ $route['EmployeeEdit'] = 'users/users/employee_edit';
 $route['tasks'] = 'users/task/task_list';
 $route['create_task'] = 'users/task/create_task';
 $route['saveTask'] = 'users/task/save_task';
+$route['editTask'] = 'users/task/edit_task';
+$route['updateTask'] = 'users/task/update_task';
+$route['deleteTask'] = 'users/task/delete_task';
 $route['my-calendar'] = "users/Calendar";
 
 $route['attendance'] = 'users/Attendance/Attendance_list';

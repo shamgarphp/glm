@@ -136,22 +136,46 @@ class Task_model extends CI_Model
         $this->db->where('task_id', $id);
         $update = $this->db->update('gl_tasks', $data);
 
-        $count_day = count($this->input->post('day'));
-
-        $get_day_item = $this->getDaysByTaskId($id);
-
-        for($x = 0; $x < $count_day; $x++) {
-            if($this->input->post('day')[$x] != ''){
-
-                $items = array(
-                    'task_id' => $id,
-                    'day' => $this->input->post('day')[$x],
-                    'start_time' => $this->input->post('start_time')[$x],
-                    'end_time' => $this->input->post('end_time')[$x],
-                );
-                $this->db->where('task_id', $id);
-                $this->db->insert('day_item', $items);
+        $get_order_item = $this->getDaysByTaskId($id);
+            foreach ($get_order_item as $k => $v) {
+                $task_id = $v['task_id'];
+                $day = $v['day'];
+                $start_time = $v['start_time'];
+                $end_time = $v['end_time'];
+                // get the product 
+                // $product_data = $this->model_products->getProductData($product_id);
+                // $update_qty = $qty + $product_data['qty'];
+                $update_day_data = array('day' => $day,'start_time' => $start_time,'end_time' => $end_time);
+                
+                // update the product qty
+                $days = $this->updateDay($update_day_data, $task_id);
             }
+
+        // $count_day = count($this->input->post('day'));
+
+        // $get_day_item = $this->getDaysByTaskId($id);
+
+        // for($x = 0; $x < $count_day; $x++) {
+        //     if($this->input->post('day')[$x] != ''){
+
+        //         $items = array(
+        //             'task_id' => $id,
+        //             'day' => $this->input->post('day')[$x],
+        //             'start_time' => $this->input->post('start_time')[$x],
+        //             'end_time' => $this->input->post('end_time')[$x],
+        //         );
+        //         $this->db->where('task_id', $id);
+        //         $this->db->update('day_item', $items);
+        //     }
+        // }
+    }
+
+    public function updateDay($data, $id)
+    {
+        if($data && $id) {
+            $this->db->where('id', $id);
+            $update = $this->db->update('day_item', $data);
+            return ($update == true) ? true : false;
         }
     }
 
