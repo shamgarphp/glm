@@ -87,6 +87,12 @@ $route['AttendanceEdit'] = 'users/Attendance/Attendance_edit';
 
 $route['Leaves'] = 'users/leave/leave_list';
 
+$route['Programs'] = 'users/program/program_list';
+
+$route['Transport'] = 'users/transport/transport_list';
+
+$route['Funds'] = 'users/fund/fund_list';
+
 
 $route['test'] = 'users/Attendance/test';
 

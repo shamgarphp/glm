@@ -68,14 +68,46 @@
                   </ul>
                 </div>
               </li>
-
              
-                <li class="m-menu__item  m-menu__item--submenu m-menu__item<?php echo main_menu_open("Leaves",array("leave_list")); ?>" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><span class="m-menu__item-here"></span><i class="m-menu__link-icon fa fa-users"></i><span
+              <li class="m-menu__item  m-menu__item--submenu m-menu__item<?php echo main_menu_open("Leaves",array("leave_list")); ?>" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><span class="m-menu__item-here"></span><i class="m-menu__link-icon fa fa-users"></i><span
                    class="m-menu__link-text">Leave</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
                 <div class="m-menu__submenu"><span class="m-menu__arrow"></span>
                   <ul class="m-menu__subnav">
                     <li class="m-menu__item m-menu__item<?php echo main_menu_active("Leaves",array("leave_list")); ?>" aria-haspopup="true"><a href="<?php echo base_url('Leaves'); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Leaves List</span></a></li>
                      <li class="m-menu__item m-menu__item<?php echo main_menu_active("Leaves",array("","")); ?>" aria-haspopup="true"><a href="<?php echo base_url(''); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Add Leave</span></a></li>
+                         
+                  </ul>
+                </div>
+              </li>
+
+              <li class="m-menu__item  m-menu__item--submenu m-menu__item<?php echo main_menu_open("Programs",array("program_list")); ?>" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><span class="m-menu__item-here"></span><i class="m-menu__link-icon fa fa-users"></i><span
+                   class="m-menu__link-text">Program</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                <div class="m-menu__submenu"><span class="m-menu__arrow"></span>
+                  <ul class="m-menu__subnav">
+                    <li class="m-menu__item m-menu__item<?php echo main_menu_active("Programs",array("program_list")); ?>" aria-haspopup="true"><a href="<?php echo base_url('Programs'); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Program List</span></a></li>
+                     <li class="m-menu__item m-menu__item<?php echo main_menu_active("Programs",array("","")); ?>" aria-haspopup="true"><a href="<?php echo base_url(''); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Add Program</span></a></li>
+                         
+                  </ul>
+                </div>
+              </li>
+
+              <li class="m-menu__item  m-menu__item--submenu m-menu__item<?php echo main_menu_open("Transport",array("transport_list")); ?>" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><span class="m-menu__item-here"></span><i class="m-menu__link-icon fa fa-users"></i><span
+                   class="m-menu__link-text">Transport</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                <div class="m-menu__submenu"><span class="m-menu__arrow"></span>
+                  <ul class="m-menu__subnav">
+                    <li class="m-menu__item m-menu__item<?php echo main_menu_active("Transport",array("transport_list")); ?>" aria-haspopup="true"><a href="<?php echo base_url('Transport'); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Transport List</span></a></li>
+                     <li class="m-menu__item m-menu__item<?php echo main_menu_active("Programs",array("","")); ?>" aria-haspopup="true"><a href="<?php echo base_url(''); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Add Transport</span></a></li>
+                         
+                  </ul>
+                </div>
+              </li>
+
+              <li class="m-menu__item  m-menu__item--submenu m-menu__item<?php echo main_menu_open("Funds",array("fund_list")); ?>" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><span class="m-menu__item-here"></span><i class="m-menu__link-icon fa fa-users"></i><span
+                   class="m-menu__link-text">Funds</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                <div class="m-menu__submenu"><span class="m-menu__arrow"></span>
+                  <ul class="m-menu__subnav">
+                    <li class="m-menu__item m-menu__item<?php echo main_menu_active("Funds",array("fund_list")); ?>" aria-haspopup="true"><a href="<?php echo base_url('Funds'); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Funds List</span></a></li>
+                     <li class="m-menu__item m-menu__item<?php echo main_menu_active("Funds",array("","")); ?>" aria-haspopup="true"><a href="<?php echo base_url(''); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Add Funds</span></a></li>
                          
                   </ul>
                 </div>
