@@ -93,6 +93,8 @@ $route['Transport'] = 'users/transport/transport_list';
 
 $route['Funds'] = 'users/fund/fund_list';
 
+$route['Vendors'] = 'users/vendor/vendor_list';
+
 
 $route['test'] = 'users/Attendance/test';
 

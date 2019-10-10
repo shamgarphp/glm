@@ -113,6 +113,17 @@
                 </div>
               </li>
 
+              <li class="m-menu__item  m-menu__item--submenu m-menu__item<?php echo main_menu_open("Vendors",array("vendor_list")); ?>" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><span class="m-menu__item-here"></span><i class="m-menu__link-icon fa fa-users"></i><span
+                   class="m-menu__link-text">Vendors</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                <div class="m-menu__submenu"><span class="m-menu__arrow"></span>
+                  <ul class="m-menu__subnav">
+                    <li class="m-menu__item m-menu__item<?php echo main_menu_active("Vendors",array("vendor_list")); ?>" aria-haspopup="true"><a href="<?php echo base_url('Vendors'); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Vendors List</span></a></li>
+                     <li class="m-menu__item m-menu__item<?php echo main_menu_active("Funds",array("","")); ?>" aria-haspopup="true"><a href="<?php echo base_url(''); ?>" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Add Vendors</span></a></li>
+                         
+                  </ul>
+                </div>
+              </li>
+
 
 
            <li class="m-menu__item  m-menu__item--submenu m-menu__item<?php //echo main_menu_open("user",array("users_list","user_registration","user_edit","selected_users","users_exams","student_enquiry_list")); ?>" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><span class="m-menu__item-here"></span><i class="m-menu__link-icon fa fa-users"></i><span
