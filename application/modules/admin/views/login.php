@@ -75,7 +75,7 @@
         <!-- begin:: Page -->
         <div class="m-grid m-grid--hor m-grid--root m-page">
             <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-grid--tablet-and-mobile m-grid--hor-tablet-and-mobile m-login m-login--1 m-login--signin" id="m_login">
-                  <div class="m-grid__item m-grid__item--fluid m-grid m-grid--center m-grid--hor m-grid__item--order-tablet-and-mobile-1  m-login__content m-grid-item--center" style="background-image: url(<?php echo base_url('admin_assets');?>/app/media/img//bg/bg-4.jpg)">
+                  <div class="m-grid__item m-grid__item--fluid m-grid m-grid--center m-grid--hor m-grid__item--order-tablet-and-mobile-1  m-login__content m-grid-item--center" style="background-image: url(<?php echo base_url('admin_assets');?>/app/media/img//bg/login.jpg)">
                     <div class="m-grid__item">
                         <h3 class="m-login__welcome">Goodlife</h3>
                         <p class="m-login__msg">
@@ -83,7 +83,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="m-grid__item m-grid__item--order-tablet-and-mobile-2 m-login__aside">
+                <div class="m-grid__item m-grid__item--order-tablet-and-mobile-2 m-login__aside"  style="background-image: url(<?php echo base_url('admin_assets');?>/app/media/img//bg/log1.jpg)">
                     <div class="m-stack m-stack--hor m-stack--desktop">
                         <div class="m-stack__item m-stack__item--fluid">
                             <div class="m-login__wrapper">
