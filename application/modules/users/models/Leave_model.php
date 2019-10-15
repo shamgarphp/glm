@@ -41,4 +41,16 @@ class Leave_model extends CI_Model
         }
     }
 
+    public function save_leave()
+    {
+        $data = array(
+         'leave_type_id' => $this->input->post("leave_type_id"),
+         'start_date' => $this->input->post("start_date"),
+         'end_date' => $this->input->post("end_date"),
+         'description' => $this->input->post("comment")
+        );
+
+        $insert = $this->db->insert('glm_leaves', $data);
+    }
+
 }

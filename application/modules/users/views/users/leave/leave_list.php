@@ -39,8 +39,8 @@ input[type = search] {
                   <ul class="m-portlet__nav">
                     <li class="m-portlet__nav-item">
 
-                      <h4><a href="#" class="btn btn-success m-btn m-btn--custom m-btn--icon m-btn--air"
-                        ><i class="fas fa-plus"></i>Add Leave</a></h4>
+                      <h4><a href="<?php echo base_url('applyLeave'); ?>" class="btn btn-success m-btn m-btn--custom m-btn--icon m-btn--air"
+                        ><i class="fas fa-plus"></i>Apply Leave</a></h4>
                       
                     </li>
                     <li class="m-portlet__nav-item"></li>

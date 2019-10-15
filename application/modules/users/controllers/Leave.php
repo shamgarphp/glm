@@ -20,65 +20,22 @@ class Leave extends MX_Controller
         $this->load->view('admin_template/main',$data);     
     }
 
-    // public function leave_list()
-    // {
-    //    $this->form_validation->set_rules('employee','employee','required|trim');
-    //    $this->form_validation->set_rules('today_date','date','required|trim');
-    //    $this->form_validation->set_rules('Sign_in_time','sign in time','required|trim');
-    //    $this->form_validation->set_rules('Sign_Out_time','sign out time','required|trim');
-    
-    //     if ($this->form_validation->run() == FALSE)
-    //     {
-    //         $data['employee_list']    =  $this->User_model->getall_employees();
-    //         $data['leave_types']      =  $this->Leave_model->leave_types();
-    //         // $data['attendance_list']  =  $this->Leave_model->getall_attendance();
-    
-    //         $data['table_js'] = 'users/users/js/table_js'; 
-    //         $data['file'] = 'users/users/leave/leave_list';
-    //         $data['custom_js'] = 'users/users/leave/js/custom_js';
-    //         $this->load->view('admin_template/main',$data); 
-    //     }
-    //     else
-    //     {
-    //         if(isset($_POST['add_attendance']) && !empty($_POST['add_attendance']))
-    //         {                               
-    //             if(isset($_POST['employee']) && !empty($_POST['employee']))
-    //             {
-    //                 $today_date = $this->input->post("today_date");
-    //                 $newdate = date("Y-m-d", strtotime($today_date));
-    //                 $employee_id =   $_POST['employee'];
-    //                 // $usercheck  =  $this->Leave_model->attendance_check($employee_id,$newdate);
+    public function apply_leave()
+    {   
+      $data['file']        = 'users/users/leave/apply_leave';
+      $data['leaveTypes'] =  $this->Leave_model->leave_types();
+      //$data['staff_locations'] = $this->Vbs_model->getall_location();
+      $data['validation_js']  = 'admin/all_common_js/frontend_validation_js';
+      $this->load->view('admin_template/main',$data);
+    }
 
-    //                 if(empty($usercheck))
-    //                 {
-    //                     $data = array(
-    //                      'emp_id' => $this->input->post("employee"),
-    //                      'atten_date' =>  $newdate,
-    //                      'signin_time' => $this->input->post("Sign_in_time"),
-    //                      'signout_time' => $this->input->post("Sign_Out_time"),
-    //                      'status' => 1,
-    //                     );
+    public function save_leave(){
+        $this->load->model('Leave_model');
 
-    //                     // $result = $this->Leave_model->save_attendance($data);    
+      if(isset($_POST['apply_leave']) && !empty($_POST['apply_leave'])){
 
-    //                     if($result)
-    //                     {
-    //                         $this->session->set_flashdata('success', 'Attendance Add Successfully!'); 
-    //                         redirect('attendance');
-    //                     }
-    //                     else
-    //                     {
-    //                         $this->session->set_flashdata('error', 'Attendance Failed!'); 
-    //                         redirect('attendance');
-    //                     }  
-    //                 }
-    //                 else
-    //                 {
-    //                     $this->session->set_flashdata('error', 'Already Exits!'); 
-    //                     redirect('attendance');
-    //                 }
-    //             }              
-    //         }
-    //     }        
-    // }
+        $result = $this->Leave_model->save_leave();
+        redirect('Leaves');
+      }
+    }
 }

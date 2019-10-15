@@ -86,6 +86,8 @@ $route['attendance'] = 'users/Attendance/Attendance_list';
 $route['AttendanceEdit'] = 'users/Attendance/Attendance_edit';
 
 $route['Leaves'] = 'users/leave/leave_list';
+$route['applyLeave'] = 'users/leave/apply_leave';
+$route['saveLeave'] = 'users/leave/save_leave';
 
 $route['Programs'] = 'users/program/program_list';
 
