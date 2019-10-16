@@ -6,7 +6,14 @@
 
 body {
   background: #007bff;
-  background: linear-gradient(to right, #99a9bd, #33AEFF);
+  /*background: linear-gradient(to right, #99a9bd, #33AEFF);*/
+  background: linear-gradient(to right, #790506, #f8a51a);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #8a0204 !important;
+    border-color: #007bff;
 }
 
 .card-signin {
@@ -158,10 +165,11 @@ body {
 <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <div class="container">
     <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5" style="margin-top: 8rem!important; border-radius: 1.25rem;">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto"><br>
+        <img style="width: 440px; height: 100px;" src="<?php echo base_url('admin_assets');?>/app/media/img//bg/goodlife_logo1.jpg">
+        <div class="card card-signin my-5" style="border-radius: 1.25rem;">
           <div class="card-body">
-            <h5 class="card-title text-center">Sign In To Admin</h5>
+            <h5 class="card-title text-center">LOGIN</h5>
             <form class="form-signin" method="POST" name="login">
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="admin_email">
