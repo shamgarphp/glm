@@ -14,6 +14,14 @@
     margin: 0px 90px 0px 50px;
 }*/
 
+.m-header {
+    background-color: #790506;
+}
+
+.m-aside-menu.m-aside-menu--skin-dark {
+    background-color: #790506;
+}
+
 </style>
   <head>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.18/css/AdminLTE.css">

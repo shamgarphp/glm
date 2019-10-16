@@ -1,3 +1,27 @@
+<style type="text/css">
+  .m-header {
+    background-color: #790506;
+}
+
+.m-aside-menu.m-aside-menu--skin-dark {
+    background-color: #790506;
+}
+.m-brand {
+    -webkit-transition: width 0.2s ease;
+    transition: width 0.2s ease;
+    height: 70px;
+    width: 255px;
+    padding: 0px 30px;
+    background: #c3be0d;
+}
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open>.m-menu__heading, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open>.m-menu__link {
+    background-color: #e6e114;
+}
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open>.m-menu__heading .m-menu__link-text, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open>.m-menu__link .m-menu__link-text {
+    color: #020415;
+}
+</style>
+
 <?php
  function main_menu_active($selected_class,$selected_method)
  {
