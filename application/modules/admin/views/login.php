@@ -1,304 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
+<style type="text/css">
+  :root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
 
-    <!-- begin::Head -->
-    <head>
-        <meta charset="utf-8" />
-        <title>Goodlife</title>
-        <meta name="description" content="Latest updates and statistic charts">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #99a9bd, #33AEFF);
+}
 
-        <!--begin::Web font -->
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-        <script>
-            WebFont.load({
-            google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
-            active: function() {
-                sessionStorage.fonts = true;
-            }
-          });
-        </script>
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
 
-        <!--end::Web font -->
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
 
-        <!--begin:: Global Mandatory Vendors -->
-        <link href="<?php echo base_url('admin_assets');?>/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+.card-signin .card-body {
+  padding: 2rem;
+}
 
-        <!--end:: Global Mandatory Vendors -->
+.form-signin {
+  width: 100%;
+}
 
-        <!--begin:: Global Optional Vendors -->
-       <!--  <link href="<?php echo base_url('admin_assets');?>/vendors/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/animate.css/animate.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/jstree/dist/themes/default/style.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/morris.js/morris.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/chartist/dist/chartist.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/vendors/flaticon/css/flaticon.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/vendors/metronic/css/styles.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url('admin_assets');?>/vendors/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" /> -->
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
 
-        <!--end:: Global Optional Vendors -->
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
 
-        <!--begin::Global Theme Styles -->
-        <link href="<?php echo base_url('admin_assets');?>/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+.form-label-group input {
+  height: auto;
+  border-radius: 2rem;
+}
 
-        <!--RTL version:<link href="../../../assets/demo/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
 
-        <!--end::Global Theme Styles -->
-        <link rel="shortcut icon" href="<?php echo base_url('admin_assets');?>/demo/media/img/logo/favicon.ico" />
-    </head>
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
 
-    <!-- end::Head -->
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
 
-    <!-- begin::Body -->
-    <body class="m--skin- m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
 
-        <!-- begin:: Page -->
-        <div class="m-grid m-grid--hor m-grid--root m-page">
-            <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-grid--tablet-and-mobile m-grid--hor-tablet-and-mobile m-login m-login--1 m-login--signin" id="m_login">
-                  <div class="m-grid__item m-grid__item--fluid m-grid m-grid--center m-grid--hor m-grid__item--order-tablet-and-mobile-1  m-login__content m-grid-item--center" style="background-image: url(<?php echo base_url('admin_assets');?>/app/media/img//bg/bg-4.jpg)">
-                    <div class="m-grid__item">
-                        <h3 class="m-login__welcome">Goodlife</h3>
-                        <p class="m-login__msg">
-                            Lorem ipsum dolor sit amet, coectetuer adipiscing<br>elit sed diam nonummy et nibh euismod
-                        </p>
-                    </div>
-                </div>
-                <div class="m-grid__item m-grid__item--order-tablet-and-mobile-2 m-login__aside">
-                    <div class="m-stack m-stack--hor m-stack--desktop">
-                        <div class="m-stack__item m-stack__item--fluid">
-                            <div class="m-login__wrapper">
-                                <div class="m-login__logo">
-                                    <a href="#">
-                                        <img src="<?php echo base_url('admin_assets');?>/app/media/img/logos/logo-2.png">
-                                    </a>
-                                </div>
-                                <div class="m-login__signin">
-                                    <div class="m-login__head">
-                                        <h3 class="m-login__title">Sign In To Admin</h3>
-                                    </div>
-                                    <form class="m-login__form m-form"  method="POST" name="login">
-                                        <div class="form-group m-form__group">
-                                            <input class="form-control m-input" type="text" placeholder="Email" autocomplete="off"  name="admin_email" id="admin_email">
-                                        </div>
-                                        <div class="form-group m-form__group">
-                                            <input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="pass" id="pass">
-                                        </div>
-                                        <div class="row m-login__form-sub">
-                                           
-                                            <div class="col m--align-right">
-                                                <a href="javascript:;" id="m_login_forget_password" class="m-link">Forget Password ?</a>
-                                            </div>
-                                        </div>
-                                        <div class="m-login__form-action">
-                                           <!--  <button type="submit"  id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air" name="admin_login" id="admin_login" value="submit">Login</button> -->
-                                           <input class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air" type="submit" name="submit" value="Submit">
-                                        </div>
-                                        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
-                                       
-                                    </form>
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
 
-                                    <!-- <form action="" method="POST">
-                                        <input type="text"  name="admin_email" id="admin_email">
-                                        <input type="text" name="pass" id="pass">
-                                        <input type="submit" name="submit" value="submit">
-                                        
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
 
-                                    </form>  -->
-                                   
+.form-label-group input::placeholder {
+  color: transparent;
+}
 
-                                </div>
-                                <div class="m-login__signup">
-                                    <div class="m-login__head">
-                                        <h3 class="m-login__title">Sign Up</h3>
-                                        <div class="m-login__desc">Enter your details to create your account:</div>
-                                    </div>
-                                    <form class="m-login__form m-form" action="">
-                                        <div class="form-group m-form__group">
-                                            <input class="form-control m-input" type="text" placeholder="Fullname" name="fullname">
-                                        </div>
-                                        <div class="form-group m-form__group">
-                                            <input class="form-control m-input" type="text" placeholder="Email" name="email" autocomplete="off">
-                                        </div>
-                                        <div class="form-group m-form__group">
-                                            <input class="form-control m-input" type="password" placeholder="Password" name="password">
-                                        </div>
-                                        <div class="form-group m-form__group">
-                                            <input class="form-control m-input m-login__form-input--last" type="password" placeholder="Confirm Password" name="rpassword">
-                                        </div>
-                                        <div class="row form-group m-form__group m-login__form-sub">
-                                            <div class="col m--align-left">
-                                                <label class="m-checkbox m-checkbox--focus">
-                                                    <input type="checkbox" name="agree"> I Agree the <a href="#" class="m-link m-link--focus">terms and conditions</a>.
-                                                    <span></span>
-                                                </label>
-                                                <span class="m-form__help"></span>
-                                            </div>
-                                        </div>
-                                        <div class="m-login__form-action">
-                                            <button id="m_login_signup_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">Sign Up</button>
-                                            <button id="m_login_signup_cancel" class="btn btn-outline-focus  m-btn m-btn--pill m-btn--custom">Cancel</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="m-login__forget-password">
-                                    <div class="m-login__head">
-                                        <h3 class="m-login__title">Forgotten Password ?</h3>
-                                        <div class="m-login__desc">Enter your email to reset your password:</div>
-                                    </div>
-                                    <form class="m-login__form m-form" action="">
-                                        <div class="form-group m-form__group">
-                                            <input class="form-control m-input" type="text" placeholder="Email" name="email" id="m_email" autocomplete="off">
-                                        </div>
-                                        <div class="m-login__form-action">
-                                            <button id="m_login_forget_password_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">Request</button>
-                                            <button id="m_login_forget_password_cancel" class="btn btn-outline-focus m-btn m-btn--pill m-btn--custom">Cancel</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+.mt-5, .my-5 {
+    margin-top: none;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1.25rem;
+}
+</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5" style="margin-top: 8rem!important; border-radius: 1.25rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In To Admin</h5>
+            <form class="form-signin" method="POST" name="login">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="admin_email">
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="pass">
+                <label for="inputPassword">Password</label>
+              </div>
+
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember password</label>
+              </div>
+              <input class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="submit" value="Login">
+              <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
+            </form>
+          </div>
         </div>
-
-        <!-- end:: Page -->
-
-        <!--begin:: Global Mandatory Vendors -->
-        <script src="<?php echo base_url('admin_assets');?>/vendors/jquery/dist/jquery.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js-cookie/src/js.cookie.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/moment/min/moment.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/wnumb/wNumb.js" type="text/javascript"></script>
-
-        <!--end:: Global Mandatory Vendors -->
-
-        <!--begin:: Global Optional Vendors -->
-        <script src="<?php echo base_url('admin_assets');?>/vendors/jquery.repeater/src/lib.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/jquery.repeater/src/repeater.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/block-ui/jquery.blockUI.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/forms/bootstrap-datepicker.init.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/forms/bootstrap-timepicker.init.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/forms/bootstrap-daterangepicker.init.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/forms/bootstrap-switch.init.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/select2/dist/js/select2.full.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/typeahead.js/dist/typeahead.bundle.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/handlebars/dist/handlebars.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/inputmask/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/inputmask/dist/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/inputmask/dist/inputmask/inputmask.numeric.extensions.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/inputmask/dist/inputmask/inputmask.phone.extensions.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/nouislider/distribute/nouislider.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/autosize/dist/autosize.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/dropzone/dist/dropzone.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/summernote/dist/summernote.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/markdown/lib/markdown.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/forms/bootstrap-markdown.init.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/jquery-validation/dist/jquery.validate.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/forms/jquery-validation.init.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/bootstrap-notify/bootstrap-notify.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/base/bootstrap-notify.init.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/toastr/build/toastr.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/jstree/dist/jstree.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/raphael/raphael.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/morris.js/morris.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/chartist/dist/chartist.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/charts/chart.init.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/vendors/jquery-idletimer/idle-timer.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/counterup/jquery.counterup.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url('admin_assets');?>/vendors/js/framework/components/plugins/base/sweetalert2.init.js" type="text/javascript"></script>
-
-        <!--end:: Global Optional Vendors -->
-
-        <!--begin::Global Theme Bundle -->
-        <script src="<?php echo base_url('admin_assets');?>/demo/base/scripts.bundle.js" type="text/javascript"></script>
-
-        <!--end::Global Theme Bundle -->
-
-        <!--begin::Page Scripts -->
-        <script src="<?php echo base_url('admin_assets');?>/snippets/custom/pages/user/login.js" type="text/javascript"></script>
-
-        <!--end::Page Scripts -->
-    </body>
-
-    <!--Start toster validation -->
-    <?php if($this->session->flashdata('success')) {  ?>
-    <script type="text/javascript">
-    toastr.success("<?php echo $this->session->flashdata('success'); ?>", "", {
-    "closeButton": "true",
-    "progressBar": "true",
-    "timeOut": "5000",
-    "extendedTimeOut": "2000"   
-    });
-    </script> 
-    <?php  } elseif($this->session->flashdata('error')){ ?>
-    <script type="text/javascript">
-    toastr.error("<?php echo $this->session->flashdata('error'); ?>", "", {
-    "closeButton": "true",
-    "progressBar": "true"
-    });
-    </script> 
-    <?php } ?>
-
-    <?php 
-    $err = validation_errors();
-    $err_msg   = str_replace(array("\r","\n"), '\n', $err);
-    if(isset($err_msg) &&  $err_msg != ""){?>
-    <script type="text/javascript">
-    toastr.error("<?php echo $err_msg; ?>", "", {
-    "closeButton": "true",
-    "progressBar": "true"
-    });
-    </script> 
-    <?php  } ?>   
-    <!--End toster validation --> 
-
-
-
-    <!-- end::Body -->
-</html>
+      </div>
+    </div>
+  </div>
+</body>
