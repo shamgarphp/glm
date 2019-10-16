@@ -90,6 +90,8 @@ $route['applyLeave'] = 'users/leave/apply_leave';
 $route['saveLeave'] = 'users/leave/save_leave';
 
 $route['Programs'] = 'users/program/program_list';
+$route['addProgram'] = 'users/program/add_program';
+$route['saveProgram'] = 'users/program/save_program';
 
 $route['Transport'] = 'users/transport/transport_list';
 

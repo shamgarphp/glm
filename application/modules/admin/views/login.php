@@ -156,8 +156,7 @@ body {
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<body>
-  <div class="container">
+<div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5" style="margin-top: 8rem!important; border-radius: 1.25rem;">
@@ -186,4 +185,3 @@ body {
       </div>
     </div>
   </div>
-</body>
