@@ -70,11 +70,12 @@
               <div class="small-box bg-aqua">
                 <div class="inner">
                   <br><br>
-                  <center><p>ADMINSTRATION</p></center>
+                  <p style="margin-left: 15px;">ADMINSTRATION</p>
                   <br><br>                  
                 </div>
                 <div class="icon">
-                  <i class="ion ion-person-add"></i>
+                  <!-- <i class="ion ion-person-add"></i> -->
+                  <img style="width: 100px; height: 60px;" src="<?php echo base_url('admin_assets');?>/app/media/img//bg/admin_icon.png">
                 </div>
                 <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
@@ -85,12 +86,13 @@
                 <div class="inner">
                   <!-- <a class="textcolor" href="<?php //echo base_url('dashboardf');?>"> -->
                   <br><br>
-                  <center><p>FINANCE</p></center>
+                  <center><p style="margin-left: -40px;">FINANCE</p></center>
                   <br><br>
                 </a>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-cash"></i>
+                  <!-- <i class="ion ion-cash"></i> -->
+                  <img style="width: 100px; height: 60px;" src="<?php echo base_url('admin_assets');?>/app/media/img//bg/finance.png">
                 </div>
                 <a href="<?php echo base_url('dashboardf');?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
@@ -101,12 +103,13 @@
                 <div class="inner">
                   <!-- <a class="textcolor" href="<?php //echo base_url('activity');?>"> -->
                   <br><br>
-                  <center><p>ACTIVITY</p></center>
+                  <center><p style="margin-left: -40px;">ACTIVITY</p></center>
                   <br><br>
                 </a>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-person-add"></i>
+                  <img style="width: 100px; height: 60px;" src="<?php echo base_url('admin_assets');?>/app/media/img//bg/activity.png">
+                  <!-- <i class="ion ion-person-add"></i> -->
                 </div>
                 <a href="<?php echo base_url('Programs');?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
@@ -125,12 +128,13 @@
                 <div class="inner">
                   <!-- <a class="textcolor" href="<?php //echo base_url('dashboardf');?>"> -->
                   <br><br>
-                  <center><p>STAFF</p></center>
+                  <center><p style="margin-left: -40px;">STAFF</p></center>
                   <br><br>
                 </a>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
+                  <!-- <i class="ion ion-stats-bars"></i> -->
+                  <img style="width: 100px; height: 60px;" src="<?php echo base_url('admin_assets');?>/app/media/img//bg/staff_icon.png">
                 </div>
                 <a href="<?php echo base_url('dashboardf');?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
@@ -141,12 +145,13 @@
                 <div class="inner">
                   <!-- <a class="textcolor" href="<?php //echo base_url('db_vbs');?>"> -->
                   <br><br>
-                  <center><p>VBS</p></center>
+                  <center><p style="margin-left: -40px;">VBS</p></center>
                   <br><br>
                 </a>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-person-add"></i>
+                  <!-- <i class="ion ion-person-add"></i> -->
+                  <img style="width: 100px; height: 60px;" src="<?php echo base_url('admin_assets');?>/app/media/img//bg/vbs_icon.jpg">
                 </div>
                 <a href="<?php echo base_url('db_vbs');?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
