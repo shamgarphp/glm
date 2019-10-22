@@ -13,7 +13,13 @@ class Admin_dashboards extends MX_Controller
     
   	public function index()
   	{
-        $data['file'] = 'admin_dashboard/admin_dashboard/dashboards.php';
+        $user_id = $this->session->userdata('user_id');
+        $role_id = $this->session->userdata('role_id');
+        // $userdata = array($user_id,$role_id);
+
+        $data['file'] = 'admin_dashboard/admin_dashboard/dashboards';
+        $data['userId'] = $user_id;
+        $data['roleId'] = $role_id;
         //$data['custom_js']  = 'admin_dashboard/admin_dashboard/custom_js/admin_dashboard_js.php';
         // $data['total_events']     = $this->dashboard->count_events();
         // $data['total_services']     = $this->dashboard->count_services();

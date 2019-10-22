@@ -42,7 +42,8 @@
           <div class="m-subheader ">
             <div class="d-flex align-items-center">
               <div class="mr-auto">
-                <h3 class="m-subheader__title" style="margin: 0px 0px 0px 74px;">Dashboard</h3>
+                <h3 class="m-subheader__title" style="margin: 0px 0px 0px 74px;">Dashboard 
+                  <?php echo $roleId; ?></h3>
               </div>
             
             </div>

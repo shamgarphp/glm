@@ -170,7 +170,7 @@ body {
         <div class="card card-signin my-5" style="border-radius: 1.25rem;">
           <div class="card-body">
             <h5 class="card-title text-center">LOGIN</h5>
-            <form class="form-signin" method="POST" name="login">
+            <form class="form-signin" method="POST" name="login" action="<?php echo base_url('auth/login') ?>">
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="admin_email">
                 <label for="inputEmail">Email address</label>
